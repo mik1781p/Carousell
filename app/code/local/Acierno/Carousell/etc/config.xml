@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <Acierno_Carousell>
+            <version>0.1.0</version>
+        </Acierno_Carousell>
+    </modules>
+    <global>
+        <blocks>
+            <acierno_carousell>
+                <class>Acierno_Carousell_Block</class>
+            </acierno_carousell>
+        </blocks>
+        <helpers>
+            <acierno_carousell>
+                <class>Acierno_Carousell_Helper</class>
+            </acierno_carousell>
+        </helpers>
+        <models>
+            <acierno_carousell>
+                <class>Acierno_Carousell_Model</class>
+                <resourceModel>acierno_carousell_resource</resourceModel>
+
+                <!-- un resource è un supporto al model -->
+                <!-- serivirà  a dichiare le tabelle, vera connessione con il DB-->
+                <!-- creazione del nostro DB -->
+
+            </acierno_carousell>
+            <acierno_carousell_resource>
+                <class>Acierno_Carousell_Model_Resource</class>
+
+                <!-- è ogni oggetto/tabella del database -->
+                <!-- category in questo caso è l'entita  -->
+                <!-- che stiamo inizializzando per questo modulo, stessa -->
+                <!-- cosa story -->
+
+                <entities>
+                    <image>
+                        <table>acierno_carousell_image</table>
+                    </image>
+                </entities>
+            </acierno_carousell_resource>
+        </models>
+        <resources>
+            <acierno_carousell_setup>
+                <setup>
+                    <module>Acierno_Carousell</module>
+                </setup>
+            </acierno_carousell_setup>
+        </resources>
+    </global>
+    <frontend>
+        <translate>
+            <modules>
+                <acierno_carousell>
+                    <files>
+                        <default>Acierno_Carousell.csv</default>
+                    </files>
+                </acierno_carousell>
+            </modules>
+        </translate>
+        <routers>
+            <acierno_carousell>
+                <use>standard</use>
+                <args>
+                    <module>Acierno_Carousell</module>
+                    <frontName>images</frontName>
+                </args>
+            </acierno_carousell>
+        </routers>
+        <layout>
+            <updates>
+                <acierno_carousell>
+                    <file>acierno_carousell.xml</file>
+                </acierno_carousell>
+            </updates>
+        </layout>
+    </frontend>
+    <admin> <!-- backend -->
+        <routers>
+            <acierno_carousell>
+                <use>admin</use>
+                <args>
+                    <module>Acierno_Carousell</module>
+                    <frontName>acierno_carousell</frontName>
+                </args>
+            </acierno_carousell>
+        </routers>
+    </admin>
+    <adminhtml> <!-- pagine del backend -->
+        <translate>
+            <modules>
+                <acierno_carousell>
+                    <files>
+                        <default>Acierno_Carousell.csv</default>
+                    </files>
+                </acierno_carousell>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <acierno_carousell>
+                    <file>acierno_carousell.xml</file>
+                </acierno_carousell>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <acierno_carousell>
+            <configuration>
+                <enabled>0</enabled>
+                <size>wrapped</size>
+                <libraryJQuery>theme</libraryJQuery>
+                <chooselibrary>none</chooselibrary>
+            </configuration>
+        </acierno_carousell>
+    </default>
+</config>

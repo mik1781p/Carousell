@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <sections>
+        <acierno_carousell module="acierno_carousell"  translate="label">
+            <label>Acierno Carousell</label>
+            <tab>general</tab>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups translate="label">
+                <general translate="label">
+                    <label>General Configuration</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled  translate="label">
+                            <label>Enabled</label>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Is this module enabled?</tooltip>
+                        </enabled>
+                        <size translate="label">
+                            <label>Size type</label>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>acierno_carousell/adminhtml_system_config_form_selectconfig</source_model>
+                            <tooltip>What size do you want?</tooltip>
+                        </size>
+                        <chooselibrary translate="label">
+                            <label>Choose your library</label>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>acierno_carousell/adminhtml_system_config_form_selectlibrary</source_model>
+                            <tooltip>What library do you want to use? Care, if you choose
+                                multiple libraries from the same repository may cause conflict</tooltip>
+                        </chooselibrary>
+                        <libraryJQuery translate="label">
+                            <label>Load your Js library</label>
+                            <frontend_type>file</frontend_type>
+                            <backend_model>acierno_carousell/adminhtml_system_config_backend_file</backend_model>
+                            <upload_dir config="system/filesystem/media" score_info="1">carousell</upload_dir>
+                            <base_url type="media" score_info="1">carousell</base_url>
+                            <tooltip>What size do you want?</tooltip>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </libraryJQuery>
+
+                    </fields>
+                </general>
+            </groups>
+        </acierno_carousell>
+    </sections>
+</config>

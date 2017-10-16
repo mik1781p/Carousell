@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <acierno_carousell>
+            <active>true</active>
+            <codePool>local</codePool>
+        </acierno_carousell>
+    </modules>
+</config>

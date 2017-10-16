@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <menu>
+        <cms>
+            <children>
+                <acierno_carousell>
+                    <title>Carousell</title>
+                    <sort_order>90</sort_order>
+                    <children>
+                        <acierno_carousell_image>
+                            <title>Images</title>
+                            <sort_order>10</sort_order>
+                            <action>acierno_carousell/adminhtml_image</action>
+                        </acierno_carousell_image>
+                    </children>
+                </acierno_carousell>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow everything</title>
+            </all>
+            <admin>
+                <children>
+                    <cms>
+                        <children>
+                            <acierno_carousell translate="title">
+                                <title>Acierno  Carousell</title>
+                                <sort_order>90</sort_order>
+                            </acierno_carousell>
+                        </children>
+                    </cms>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <acierno_carousell translate="title">
+                                        <title>Acierno Carousell</title>
+                                        <sort_order>100</sort_order>
+                                    </acierno_carousell>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
